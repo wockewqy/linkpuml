@@ -14,7 +14,36 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-   <h1>LinkPUML插件</h1>
+    <h1>LinkPUML Plugin</h1>
+
+<h2>Description</h2>
+
+<p>The LinkPUML plugin is an IntelliJ IDEA plugin that can recognize the <code>@puml</code> tag in your Java code comments and add a small icon before the line. When you click on this small icon, the plugin will open the corresponding PlantUML file in the editor.</p>
+
+<h2>Features</h2>
+
+<ul>
+  <li>Scan Java code comments and recognize the <code>@puml</code> tag.</li>
+  <li>Add a small icon before the comment line that contains the <code>@puml</code> tag.</li>
+  <li>When the small icon is clicked, it navigates to the corresponding PlantUML file.</li>
+</ul>
+
+<h2>How to Use</h2>
+
+<p>1. Add the <code>@puml</code> tag in your Java code comments, followed by the path of the PlantUML file. For example:</p>
+
+<pre><code>
+//@puml src/main/resources/diagram.puml
+public class MyClass {
+    // ...
+}
+</code></pre>
+
+<p>2. Before the comment line containing the `@puml` tag, you will see a small icon.</p>
+
+<p>3. Click this small icon, and the plugin will open the `src/main/resources/diagram.puml` file in the editor.</p>
+
+<h1>LinkPUML插件</h1>
 
 <h2>描述</h2>
 
