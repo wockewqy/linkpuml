@@ -10,8 +10,8 @@ import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiElement
 import java.awt.event.MouseEvent
 
-
 class PumlGutterIconNavigationHandler : GutterIconNavigationHandler<PsiElement> {
+
     override fun navigate(e: MouseEvent?, elt: PsiElement?) {
         if (elt != null) {
             val pumlTag = getPumlTag(elt)
@@ -42,16 +42,13 @@ class PumlGutterIconNavigationHandler : GutterIconNavigationHandler<PsiElement> 
 
     private fun openPumlFile(project: Project, pumlFilePath: String) {
         val projectFileIndex = ProjectRootManager.getInstance(project).fileIndex
-        val contentRoots = projectFileIndex.getContentRootForFile(project.baseDir, false)
-        val file =
-            LocalFileSystem.getInstance().findFileByPath(contentRoots?.path + "/" + pumlFilePath)
+        val contentRoots = project.projectFile?.let { projectFileIndex.getContentRootForFile(it, true) }
+        val file = LocalFileSystem.getInstance().findFileByPath(contentRoots?.path + "/" + pumlFilePath)
         if (file != null) {
             FileEditorManager.getInstance(project).openFile(file, true)
         } else {
             Messages.showMessageDialog(project, "Cannot find file: $pumlFilePath", "Error", Messages.getErrorIcon())
         }
-
-
     }
 
 
