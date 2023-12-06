@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.upenv"
-version = "23.11.28-SNAPSHOT"
+version = "23.12.06-SNAPSHOT"
 
 repositories {
     maven {
