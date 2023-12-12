@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.upenv"
-version = "23.12.06-SNAPSHOT"
+version = "23.12.12-SNAPSHOT"
 
 repositories {
     maven {
@@ -53,7 +53,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("222")
-        untilBuild.set("232.*")
+        untilBuild.set("233.*")
     }
 
     signPlugin {
