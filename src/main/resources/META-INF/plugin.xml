@@ -85,7 +85,6 @@ public class MyClass {
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <codeInsight.lineMarkerProvider language="kotlin"
-                                        implementationClass="com.upenv.linkpuml.PumlTagLineMarkerProvider"/>
+        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.upenv.linkpuml.PumlTagLineMarkerProvider"/>
     </extensions>
 </idea-plugin>
